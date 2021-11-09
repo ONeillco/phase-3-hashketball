@@ -131,6 +131,7 @@ end
 def all_players
   game_hash[:home][:players] +  game_hash[:away][:players]
 end
+
 def player_stats(player_name)
  all_players.find do |player| 
     player[:player_name] == player_name 
