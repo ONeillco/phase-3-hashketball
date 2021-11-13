@@ -1,3 +1,4 @@
+require 'pry'
 # Write your code below game_hash
 def game_hash
   {
@@ -148,6 +149,7 @@ def shoe_size(player_name)
   player[:shoe]
 end
 
+
 def find_team(team_name)
   # #find on with a hash returns an array with the first key and value that match the condition
   team_info = game_hash.find do |location, team_data|
@@ -285,5 +287,13 @@ home.addPlayer(homePlayers[0])
 
 # puts home
 puts home.players.last.player_name
+
+def most_points_scored(player_name)
+  all_players.max_by do |player|
+    player[:points]
+    binding.pry
+  end
+end
+
 
 
